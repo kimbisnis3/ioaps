@@ -16,11 +16,6 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    },
-    {
       title: 'Movies',
       url: '/movies',
       icon: 'list'
@@ -31,9 +26,9 @@ export class AppComponent {
       icon: 'list'
     },
     {
-      title: 'News',
-      url: '/news',
-      icon: 'camera'
+      title: 'Anime',
+      url: '/anime',
+      icon: 'list'
     },
   ];
 

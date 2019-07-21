@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Anime
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+    
+  <ion-content>
+   
+    <ion-list>
+  
+        <!-- <ion-list-header>
+          Daftar Berita
+        </ion-list-header> -->
+  
+        <ion-searchbar [(ngModel)]="q" (ionChange)="getAnime($event)"  placeholder="Contoh : 'Naruto'"></ion-searchbar>
+  
+          <ion-item>
+              <ion-label>Jumlah</ion-label>
+              <ion-select [(ngModel)]="limit" (ionChange)="getAnime($event)" [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Pilih Jumlah">
+                <ion-select-option value="10">10</ion-select-option>
+                <ion-select-option value="20">20</ion-select-option>
+                <ion-select-option value="50">50</ion-select-option>
+              </ion-select>
+            </ion-item>
+  
+      <ion-item *ngFor="let item of (results | async)" [routerLink]="['/', 'anime', item.mal_id]">
+          <ion-avatar slot="start">
+            <img [src]= "item.image_url" *ngIf="item.image != 'N/A'">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ item.title }} {{ item.mal_id }}</h2>
+            <!-- <h3>{{ item.ket }}</h3> -->
+            <!-- <p>{{ item.artikel }}</p> -->
+          </ion-label>
+      </ion-item>
+   
+    </ion-list>
+  
+    <!-- <ion-button color="primary" (click)='PostAnime($event)'>Load</ion-button> -->
+   
+  </ion-content>

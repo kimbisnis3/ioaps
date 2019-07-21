@@ -13,7 +13,7 @@
  
   <ion-list>
  
-    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'news', item.id]">
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'news', +item.id]">
       <ion-label text-wrap>
         <h3>{{ item.name }}</h3>
         {{ item.ket }}

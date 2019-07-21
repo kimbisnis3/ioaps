@@ -11,7 +11,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'berita', pathMatch: 'full' },
   { path: 'berita', loadChildren: './pages/berita/berita.module#BeritaPageModule' },
   { path: 'berita/:id', loadChildren: './pages/berita-details/berita-details.module#BeritaDetailsPageModule' },
-  { path: 'news', loadChildren: './pages/news/news.module#NewsPageModule' }
+  { path: 'news', loadChildren: './pages/news/news.module#NewsPageModule' },
+  { path: 'anime', loadChildren: './pages/anime/anime.module#AnimePageModule' },
+  { path: 'anime/:id', loadChildren: './pages/anime-detail/anime-detail.module#AnimeDetailPageModule' }
 ];
 
 @NgModule({

@@ -20,7 +20,7 @@
       <ion-searchbar [(ngModel)]="judul" (ionChange)="getBerita($event)"></ion-searchbar>
 
         <ion-item>
-            <ion-label>Jumlah Data</ion-label>
+            <ion-label>Jumlah</ion-label>
             <ion-select [(ngModel)]="jmlData" (ionChange)="getBerita($event)" [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Pilih Jumlah">
               <ion-select-option value="10">10</ion-select-option>
               <ion-select-option value="20">20</ion-select-option>
