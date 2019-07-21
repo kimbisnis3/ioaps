@@ -19,7 +19,22 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
-    }
+    },
+    {
+      title: 'Movies',
+      url: '/movies',
+      icon: 'list'
+    },
+    {
+      title: 'Berita',
+      url: '/berita',
+      icon: 'list'
+    },
+    {
+      title: 'News',
+      url: '/news',
+      icon: 'camera'
+    },
   ];
 
   constructor(

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ information?.judul }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+
+<ion-content>
+    <ion-card class="welcome-card" *ngIf="information">
+      <img src="/assets/shapes.svg" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>{{ information.subjudul }}  </ion-card-subtitle>
+        <ion-card-title>{{ information.judul }} {{ information.id }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ information.artikel }}</p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
