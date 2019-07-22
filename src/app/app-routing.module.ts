@@ -13,7 +13,9 @@ const routes: Routes = [
   { path: 'berita/:id', loadChildren: './pages/berita-details/berita-details.module#BeritaDetailsPageModule' },
   { path: 'news', loadChildren: './pages/news/news.module#NewsPageModule' },
   { path: 'anime', loadChildren: './pages/anime/anime.module#AnimePageModule' },
-  { path: 'anime/:id', loadChildren: './pages/anime-detail/anime-detail.module#AnimeDetailPageModule' }
+  { path: 'anime/:id', loadChildren: './pages/anime-detail/anime-detail.module#AnimeDetailPageModule' },
+  { path: 'biodata', loadChildren: './pages/biodata/biodata.module#BiodataPageModule' },
+  { path: 'biodata/add', loadChildren: './pages/biodata-add/biodata-add.module#BiodataAddPageModule' }
 ];
 
 @NgModule({

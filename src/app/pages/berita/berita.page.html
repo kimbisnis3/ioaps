@@ -8,39 +8,40 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-  
+
 <ion-content>
- 
+
   <ion-list>
 
-      <!-- <ion-list-header>
+    <!-- <ion-list-header>
         Daftar Berita
       </ion-list-header> -->
 
-      <ion-searchbar [(ngModel)]="judul" (ionChange)="getBerita($event)"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="judul" (ionChange)="getBerita($event)"></ion-searchbar>
 
-        <ion-item>
-            <ion-label>Jumlah</ion-label>
-            <ion-select [(ngModel)]="jmlData" (ionChange)="getBerita($event)" [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Pilih Jumlah">
-              <ion-select-option value="10">10</ion-select-option>
-              <ion-select-option value="20">20</ion-select-option>
-              <ion-select-option value="">All</ion-select-option>
-            </ion-select>
-          </ion-item>
+    <ion-item>
+      <ion-label>Jumlah</ion-label>
+      <ion-select [(ngModel)]="jmlData" (ionChange)="getBerita($event)" [interfaceOptions]="customPopoverOptions"
+        interface="popover" placeholder="Pilih Jumlah">
+        <ion-select-option value="10">10</ion-select-option>
+        <ion-select-option value="20">20</ion-select-option>
+        <ion-select-option value="">All</ion-select-option>
+      </ion-select>
+    </ion-item>
 
     <ion-item *ngFor="let item of (results | async)" [routerLink]="['/', 'berita', item.id]">
-        <ion-avatar slot="start">
-          <img [src]= "'http://localhost/ioaps_api/'+item.image" *ngIf="item.image != 'N/A'">
-        </ion-avatar>
-        <ion-label>
-          <h2>{{ item.judul }} {{ item.id }}</h2>
-          <h3>{{ item.ket }}</h3>
-          <p>{{ item.artikel }}</p>
-        </ion-label>
+      <ion-avatar slot="start">
+        <img [src]="'http://localhost/ioaps_api/'+item.image" *ngIf="item.image != 'N/A'">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ item.judul }} {{ item.id }}</h2>
+        <h3>{{ item.ket }}</h3>
+        <p>{{ item.artikel }}</p>
+      </ion-label>
     </ion-item>
- 
+
   </ion-list>
 
   <!-- <ion-button color="primary" (click)='doloaddata($event)'>Load</ion-button> -->
- 
+
 </ion-content>

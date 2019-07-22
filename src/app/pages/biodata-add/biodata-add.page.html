@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tambah</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="askSimpan(form)">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Nama <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input name="nama" type="text" ngModel required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">HP <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input name="hp" type="text" ngModel required></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button type="submit" expand="block">Simpan</ion-button>
+    </div>
+  </form>
+</ion-content>
