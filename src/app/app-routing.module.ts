@@ -15,7 +15,11 @@ const routes: Routes = [
   { path: 'anime', loadChildren: './pages/anime/anime.module#AnimePageModule' },
   { path: 'anime/:id', loadChildren: './pages/anime-detail/anime-detail.module#AnimeDetailPageModule' },
   { path: 'biodata', loadChildren: './pages/biodata/biodata.module#BiodataPageModule' },
-  { path: 'biodata/add', loadChildren: './pages/biodata-add/biodata-add.module#BiodataAddPageModule' }
+  { path: 'biodata/add', loadChildren: './pages/biodata-add/biodata-add.module#BiodataAddPageModule' },
+  { path: 'users', loadChildren: './pages/users/users.module#UsersPageModule' },
+  { path: 'users-add', loadChildren: './pages/users-add/users-add.module#UsersAddPageModule' },
+  { path: 'developers', loadChildren: './pages/developers/developers.module#DevelopersPageModule' },
+  { path: 'developers/:id', loadChildren: './pages/developer/developer.module#DeveloperPageModule' }
 ];
 
 @NgModule({

@@ -36,6 +36,16 @@ export class AppComponent {
       url: 'biodata',
       icon: 'person'
     },
+    {
+      title: 'User',
+      url: 'users',
+      icon: 'person'
+    },
+    {
+      title: 'Developers',
+      url: 'developers',
+      icon: 'person'
+    },
   ];
 
   urlActive = this.router.url;
